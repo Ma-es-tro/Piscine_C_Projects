@@ -1,35 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_div_mod.c                                       :+:      :+:    :+:   */
+/*   ft_strncpy.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mamada <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/03/12 19:52:27 by mamada            #+#    #+#             */
-/*   Updated: 2026/03/12 19:52:33 by mamada           ###   ########.fr       */
+/*   Created: 2026/03/13 10:14:29 by mamada            #+#    #+#             */
+/*   Updated: 2026/03/13 10:14:38 by mamada           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
 #include <unistd.h>
 #include <stdio.h>
 
-void	ft_div_mod(int a, int b, int *div, int *mod)
+char	*ft_strncpy(char *dest, char *src, unsigned int n);
 {
-	*div = a / b;
-	*mod = a % b;
+	
 }
-
-// int	main()
-// {
-// 	int a;
-// 	int b;
-// 	int div;
-// 	int mod;
-
-// 	a = 10;
-// 	b = 5;
-// 	ft_div_mod(a, b, &div, &mod);
-// 	printf("Div: %d, Mod:%d\n", div, mod);
-// 	return 0;
-
-// }

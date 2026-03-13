@@ -1,35 +1,34 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_div_mod.c                                       :+:      :+:    :+:   */
+/*   ft_swap.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mamada <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/03/12 19:52:27 by mamada            #+#    #+#             */
-/*   Updated: 2026/03/12 19:52:33 by mamada           ###   ########.fr       */
+/*   Created: 2026/03/10 13:24:15 by mamada            #+#    #+#             */
+/*   Updated: 2026/03/10 13:24:18 by mamada           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
 #include <unistd.h>
-#include <stdio.h>
 
-void	ft_div_mod(int a, int b, int *div, int *mod)
+void	ft_swap(int *a, int *b)
 {
-	*div = a / b;
-	*mod = a % b;
+	int	hold;
+
+	hold = *a;
+	*a = *b;
+	*b = hold;
 }
 
 // int	main()
 // {
 // 	int a;
 // 	int b;
-// 	int div;
-// 	int mod;
+// 	char znak_a;
+// 	char znak_b;
 
-// 	a = 10;
-// 	b = 5;
-// 	ft_div_mod(a, b, &div, &mod);
-// 	printf("Div: %d, Mod:%d\n", div, mod);
-// 	return 0;
+// 	a = 42;
+// 	b = 44;
+// 	ft_swap(a, b);
 
 // }

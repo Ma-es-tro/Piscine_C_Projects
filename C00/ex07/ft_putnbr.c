@@ -1,35 +1,46 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_div_mod.c                                       :+:      :+:    :+:   */
+/*   ft_putnbr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mamada <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/03/12 19:52:27 by mamada            #+#    #+#             */
-/*   Updated: 2026/03/12 19:52:33 by mamada           ###   ########.fr       */
+/*   Created: 2026/03/08 19:58:58 by mamada            #+#    #+#             */
+/*   Updated: 2026/03/08 19:59:02 by mamada           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
 #include <unistd.h>
-#include <stdio.h>
 
-void	ft_div_mod(int a, int b, int *div, int *mod)
+void	ft_putchar(char c)
 {
-	*div = a / b;
-	*mod = a % b;
+	write (1, &c, 1);
 }
 
-// int	main()
-// {
-// 	int a;
-// 	int b;
-// 	int div;
-// 	int mod;
+void	ft_putnbr(int a)
+{
+	long	nb;
+	char	dig;
 
-// 	a = 10;
-// 	b = 5;
-// 	ft_div_mod(a, b, &div, &mod);
-// 	printf("Div: %d, Mod:%d\n", div, mod);
-// 	return 0;
+	nb = a;
+	if (nb < 0)
+	{
+		ft_putchar('-');
+		nb = -nb;
+	}
+	if (nb >= 10)
+	{
+		ft_putnbr(nb / 10);
+	}
+	dig = (nb % 10) + '0';
+	write(1, &dig, 1);
+}
 
-// }
+//  int	main()
+//  {
+//  	ft_putnbr(-2147483648);
+// 	ft_putchar('\n');
+// 	ft_putnbr(0);
+// 	ft_putchar('\n');
+// 	ft_putnbr(100067400);
+//  	return 0;
+//  }

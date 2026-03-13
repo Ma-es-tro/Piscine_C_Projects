@@ -1,35 +1,17 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_div_mod.c                                       :+:      :+:    :+:   */
+/*   ft_putchar.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mamada <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/03/12 19:52:27 by mamada            #+#    #+#             */
-/*   Updated: 2026/03/12 19:52:33 by mamada           ###   ########.fr       */
+/*   Created: 2026/03/04 18:45:43 by mamada            #+#    #+#             */
+/*   Updated: 2026/03/04 18:57:22 by mamada           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
 #include <unistd.h>
-#include <stdio.h>
 
-void	ft_div_mod(int a, int b, int *div, int *mod)
+void	ft_putchar(char c)
 {
-	*div = a / b;
-	*mod = a % b;
+	write (1, &c, 1);
 }
-
-// int	main()
-// {
-// 	int a;
-// 	int b;
-// 	int div;
-// 	int mod;
-
-// 	a = 10;
-// 	b = 5;
-// 	ft_div_mod(a, b, &div, &mod);
-// 	printf("Div: %d, Mod:%d\n", div, mod);
-// 	return 0;
-
-// }

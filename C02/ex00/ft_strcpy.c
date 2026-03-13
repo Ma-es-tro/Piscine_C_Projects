@@ -1,35 +1,39 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_div_mod.c                                       :+:      :+:    :+:   */
+/*   ft_strcpy.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mamada <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/03/12 19:52:27 by mamada            #+#    #+#             */
-/*   Updated: 2026/03/12 19:52:33 by mamada           ###   ########.fr       */
+/*   Created: 2026/03/13 09:49:56 by mamada            #+#    #+#             */
+/*   Updated: 2026/03/13 09:50:00 by mamada           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
 #include <unistd.h>
 #include <stdio.h>
 
-void	ft_div_mod(int a, int b, int *div, int *mod)
+char	*ft_strcpy(char *dest, char *src)
 {
-	*div = a / b;
-	*mod = a % b;
+	int i;
+
+	i = 0;
+
+	while(src[i] != '\0')
+	{
+		dest[i] = src[i];
+		i++;
+	}
+
+	return dest;
 }
 
 // int	main()
 // {
-// 	int a;
-// 	int b;
-// 	int div;
-// 	int mod;
+// 	char dest[20];
 
-// 	a = 10;
-// 	b = 5;
-// 	ft_div_mod(a, b, &div, &mod);
-// 	printf("Div: %d, Mod:%d\n", div, mod);
+// 	ft_strcpy(dest,"Hello");
+// 	printf("Copy: %s", dest);
 // 	return 0;
 
 // }
+

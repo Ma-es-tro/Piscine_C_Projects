@@ -1,35 +1,31 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_div_mod.c                                       :+:      :+:    :+:   */
+/*   ft_print_numbers.c                                 :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mamada <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/03/12 19:52:27 by mamada            #+#    #+#             */
-/*   Updated: 2026/03/12 19:52:33 by mamada           ###   ########.fr       */
+/*   Created: 2026/03/05 18:43:41 by mamada            #+#    #+#             */
+/*   Updated: 2026/03/05 18:43:46 by mamada           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <unistd.h>
-#include <stdio.h>
 
-void	ft_div_mod(int a, int b, int *div, int *mod)
+void	ft_print_numbers(void)
 {
-	*div = a / b;
-	*mod = a % b;
+	char	znak;
+
+	znak = '0';
+	while (znak <= '9')
+	{
+		write(1, &znak, 1);
+		znak++;
+	}
 }
 
-// int	main()
-// {
-// 	int a;
-// 	int b;
-// 	int div;
-// 	int mod;
+//  int main (void){
+//  	ft_print_numbers();
 
-// 	a = 10;
-// 	b = 5;
-// 	ft_div_mod(a, b, &div, &mod);
-// 	printf("Div: %d, Mod:%d\n", div, mod);
-// 	return 0;
-
-// }
+//  	return 0;
+//  }

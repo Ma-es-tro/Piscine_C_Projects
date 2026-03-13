@@ -1,38 +1,49 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_ultimate_div_mod.c                              :+:      :+:    :+:   */
+/*   ft_sort_int_tab.c                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mamada <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/03/12 19:38:44 by mamada            #+#    #+#             */
-/*   Updated: 2026/03/12 19:38:46 by mamada           ###   ########.fr       */
+/*   Created: 2026/03/12 19:05:19 by mamada            #+#    #+#             */
+/*   Updated: 2026/03/12 19:05:22 by mamada           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
 #include <unistd.h>
 #include <stdio.h>
 
-void	ft_ultimate_div_mod(int *a, int *b)
+void	ft_sort_int_tab(int *tab, int size)
 {
-	int num;
-	int div;
+	int temp;
 
-	num = *a;
-	div = *b;
-	*a = num / div;
-	*b = num % div;
-}
+	for (int i = 0; i < size - 1; i++)
+	{
+		for (int j = 0; j < size - i - 1; j++)
+		{
+			if (*(tab + j) > *(tab + j + 1))
+			{
+				temp = *(tab + j);
+				*(tab + j) = *(tab + j + 1);
+				*(tab + j + 1) = temp;
+			}
+		}
+	}
+}	
 
 // int	main()
 // {
-// 	int a;
-// 	int b;
+// 	int size;
+// 	int arr[] = {7,8,5,1,2};
 
-// 	a = 42;
-// 	b = 4;
+// 	size = 5;
 
-// 	ft_ultimate_div_mod(&a, &b);
-// 	printf("Div: %d, Mod:%d\n", a, b);
+// 	ft_sort_int_tab(arr, size);
+
+// 	for(int i = 0; i < size; i++)
+// 	{
+// 		printf("Sorted: %d", arr[i]);
+// 		printf("\n");
+// 	}
+
 // 	return 0;
 // }

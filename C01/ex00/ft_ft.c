@@ -1,35 +1,34 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_div_mod.c                                       :+:      :+:    :+:   */
+/*   ft_ft.c                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mamada <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/03/12 19:52:27 by mamada            #+#    #+#             */
-/*   Updated: 2026/03/12 19:52:33 by mamada           ###   ########.fr       */
+/*   Created: 2026/03/09 17:57:50 by mamada            #+#    #+#             */
+/*   Updated: 2026/03/10 10:50:17 by mamada           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
 #include <unistd.h>
-#include <stdio.h>
 
-void	ft_div_mod(int a, int b, int *div, int *mod)
+void	ft_ft(int *nbr)
 {
-	*div = a / b;
-	*mod = a % b;
+	*nbr = 42;
 }
 
 // int	main()
 // {
-// 	int a;
-// 	int b;
-// 	int div;
-// 	int mod;
+// 	int n;
+// 	char dig;
 
-// 	a = 10;
-// 	b = 5;
-// 	ft_div_mod(a, b, &div, &mod);
-// 	printf("Div: %d, Mod:%d\n", div, mod);
-// 	return 0;
+// 	ft_ft(&n);
 
+// 	if(n >= 10)
+// 	{
+// 		dig = (n / 10) + '0';
+// 		write (1, &dig, 1);
+// 	}
+
+// 	dig = (n % 10) + '0';
+// 	write(1, &dig, 1);
 // }
